@@ -59,7 +59,7 @@ public class AddInit : MonoBehaviour
 
     // Create a 320x50 banner at the top of the screen.
     Debug.Log("bannerView.LoadAd");
-        bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.BottomRight);
+        bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Bottom);
     }
     private void RequestInterstitial()
     {
@@ -132,8 +132,8 @@ public class AddInit : MonoBehaviour
     }
     public static void HideBannerAdv()
     {
-
-        bannerView.Hide();
+        if (bannerView != null)
+            bannerView.Hide();
     }
 
  

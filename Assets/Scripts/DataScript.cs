@@ -178,6 +178,7 @@ public class DataScript : MonoBehaviour
     }
     void TaskSettingsOnClick()
     {
+        AddInit.HideBannerAdv();
         DataScript.SaveTopicData(strWorkWeek);
 
         InGameVars.WorkWeek = WorkWeek;
